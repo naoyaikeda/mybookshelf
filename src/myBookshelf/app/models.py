@@ -3,4 +3,7 @@
 
 from google.appengine.ext import db
 
-# Create your models here.
+class Book(db.Model):
+    isbn = db.StringProperty(multiline=False, verbose_name=u'ISBN')
+    title = db.StringProperty(multiline=False, verbose_name=u'書名')
+    
